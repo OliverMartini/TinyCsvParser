@@ -41,13 +41,13 @@ namespace TinyCsvParser.Test.Tokenizer
         }
 
         [Test]
-        public void QuotedString_VerticalBarDelimiter_Test()
+        public void QuotedString_PipeSymbol_Test()
         {
             var tokenizer = new QuotedStringTokenizer('|');
 
             var input = "1|\"2|3\"|4";
-            var result = tokenizer.Tokenize(input);
 
+            var result = tokenizer.Tokenize(input);
             Assert.AreEqual(3, result.Length);
 
             Assert.AreEqual("1", result[0]);
